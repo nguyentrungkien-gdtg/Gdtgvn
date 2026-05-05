@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Trung Kiên | Admin Trung Gian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --dark-blue: #0a192f;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .admin-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+            border-radius: 30px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        /* Huy hiệu Verified */
+        .verified-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .avatar img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--gold);
+            padding: 5px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-online {
+            width: 10px;
+            height: 10px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            background: var(--glass);
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 204, 0, 0.1);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            width: 40px;
+            color: var(--gold);
+        }
+
+        .contact-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .contact-label { font-size: 0.7rem; color: #94a3b8; }
+        .contact-value { font-weight: bold; font-size: 1rem; }
+
+        .warning-box {
+            margin-top: 25px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px dashed #ef4444;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #fca5a5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-card">
+        <div class="verified-badge">
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <div class="avatar">
+            <!-- Thay bằng link ảnh thật của bạn -->
+            <img src="https://via.placeholder.com/150" alt="Nguyễn Trung Kiên">
+        </div>
+
+        <h1>Nguyễn Trung Kiên</h1>
+        <div class="role">
+            <span class="status-online"></span>
+            ADMIN TRUNG GIAN GIAO DỊCH
+        </div>
+
+        <div class="contact-list">
+            <!-- Facebook -->
+            <a href="https://facebook.com/trungkien1669" target="_blank" class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <div class="contact-info">
+                    <p class="contact-label">Facebook Cá Nhân</p>
+                    <p class="contact-value">trungkien1669</p>
+                </div>
+            </a>
+
+            <!-- Zalo -->
+            <a href="https://zalo.me/0365951114" target="_blank" class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="contact-info">
+                    <p class="contact-label">Zalo (Trung Kiên)</p>
+                    <p class="contact-value">0365951114</p>
+                </div>
+            </a>
+
+            <!-- Phụ trợ: Quỹ bảo hiểm -->
+            <div class="contact-item" style="cursor: default;">
+                <i class="fas fa-shield-alt"></i>
+                <div class="contact-info">
+                    <p class="contact-label">Quỹ Bảo Hiểm</p>
+                    <p class="contact-value">UY TÍN - AN TOÀN</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            Lưu ý: Check kỹ thông tin tránh mạo danh. Admin không bao giờ chủ động nhắn tin trước yêu cầu nạp tiền.
+        </div>
+
+        <div class="footer">
+            Hệ Thống Giao Dịch Trung Gian Toàn Quốc <br>
+            © 2026 Designed by Kien Nguyen
+        </div>
+    </div>
+
+</body>
+</html>
